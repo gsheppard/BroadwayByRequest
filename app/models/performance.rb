@@ -3,7 +3,7 @@ class Performance < ActiveRecord::Base
   has_many :songs, through: :set_lists
 
   def clean_time
-    DateTime.strptime(date.to_s, "%m/%d/%Y %H:%m")
+    date.to_datetime.strftime("%m/%d/%Y %H:%m")
   end
 end
 

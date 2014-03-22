@@ -32,7 +32,7 @@ class PerformancesController < ApplicationController
     if @performance.update(performance_params)
       redirect_to root_path
     else
-      redirect_to edit_performance_path
+      redirect_to edit_performance_path(@performance)
     end
   end
 

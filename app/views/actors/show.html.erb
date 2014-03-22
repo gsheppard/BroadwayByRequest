@@ -1,0 +1,8 @@
+<h1><%= @actor.full_name %></h1>
+
+Phone: <%= @actor.phone %><br>
+Email: <%= @actor.email %><br>
+
+<br>
+<%= link_to "Edit", edit_actor_path(@actor) %>
+<%= link_to "Remove", actor_path, method: :delete %>
