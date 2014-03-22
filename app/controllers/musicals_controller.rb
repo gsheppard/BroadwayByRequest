@@ -20,6 +20,8 @@ class MusicalsController < ApplicationController
 
   def show
     find_musical
+    @songs = find_musical.songs
+    @song = Song.new
   end
 
   def edit

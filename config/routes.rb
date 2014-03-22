@@ -1,7 +1,10 @@
 BroadwayByRequest::Application.routes.draw do
   root 'pages#index'
   resources :performances
-  resources :musicals
+  resources :musicals do
+    resources :songs,
+      only: [:new, :create, :destroy, :update, :edit]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

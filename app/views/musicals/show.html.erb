@@ -2,6 +2,24 @@
 
 Year: <%= @musical.year %>
 
+<h2>Song List</h2>
+<table border="1">
+  <tr>
+    <th colspan="3">Name</th>
+  </tr>
+
+  <% @songs.each do |song| %>
+    <tr>
+      <td><%= song.name %></td>
+      <td><%= link_to "Edit", edit_musical_song_path(@musical, song) %></td>
+      <td><%= link_to "Delete", musical_song_path(@musical, song), method: :delete %>
+    </tr>
+  <% end %>
+</table>
+<br>
+
+<%= link_to "Add Song", new_musical_song_path(@musical) %>
+
 <br>
 <%= link_to "Edit", edit_musical_path(@musical) %>
 <%= link_to "Remove", musical_path, method: :delete %>
