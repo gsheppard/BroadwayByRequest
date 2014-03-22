@@ -16,8 +16,20 @@ class SongsController < ApplicationController
     end
   end
 
-  def update
+  def edit
+    find_song
+    find_songs_musical
+  end
 
+  def update
+    find_song
+    find_songs_musical
+
+    if @song.update(song_params)
+      redirect_to musical_path(find_songs_musical)
+    else
+      redirect_to edit_musical_song_path(@musical, @song)
+    end
   end
 
   def destroy
