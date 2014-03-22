@@ -1,23 +1,29 @@
 <h1>Performance Info</h1>
 
-Location: <%= @performance.location %><br>
-Date: <%= @performance.clean_time %>
+<table>
+  <tr>
+    <th>Location</th>
+    <th>Date</th>
+  </tr>
+  <tr>
+    <td><%= @performance.location %></td>
+    <td><%= @performance.clean_time %></td>
+  </tr>
+</table>
 
 <h3>Set List</h3>
 
-<table border="1">
+<table>
   <tr>
-    <th></th>
-    <th></th>
     <th>Song</th>
     <th>Musical</th>
     <th>Performer(s)</th>
+    <th></th>
+    <th></th>
   </tr>
 
   <% @performance.songs.each do |song| %>
     <tr>
-      <td><%= link_to "Remove", performance_set_list_path(@performance, @performance.find_set_list(song)), method: :delete %></td>
-      <td><%= link_to "Add Singers", new_performance_set_list_cast_path(@performance, @performance.find_set_list(song)) %></td>
       <td><%= song.name %></td>
       <td><%= song.musical.name %></td>
       <td>
@@ -25,6 +31,8 @@ Date: <%= @performance.clean_time %>
         <%= actor.full_name %><br>
       <% end %>
       </td>
+      <td><%= link_to "Remove", performance_set_list_path(@performance, @performance.find_set_list(song)), method: :delete %></td>
+      <td><%= link_to "Add Singers", new_performance_set_list_cast_path(@performance, @performance.find_set_list(song)) %></td>
 
     </tr>
   <% end %>

@@ -1,7 +1,9 @@
-<%= simple_form_for @actor do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :email %>
-  <%= f.input :phone %>
-  <%= f.submit %>
-<% end %>
+<div class="medium-4 columns">
+  <%= simple_form_for @actor do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :email %>
+    <%= f.input :phone %>
+    <%= f.submit %>
+  <% end %>
+</div>
