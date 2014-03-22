@@ -1,4 +1,4 @@
 class Cast < ActiveRecord::Base
-  belongs_to :actors
-  belongs_to :set_lists
+  belongs_to :actor
+  belongs_to :set_list
 end
