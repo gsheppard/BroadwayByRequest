@@ -2,7 +2,9 @@ BroadwayByRequest::Application.routes.draw do
   root 'pages#index'
 
   resources :performances do
-    resources :set_lists
+    resources :set_lists do
+      resources :casts
+    end
   end
 
   resources :musicals do

@@ -1,0 +1,8 @@
+<%= form_for [@performance, @set_list, @cast] do |f| %>
+  <%= f.simple_fields_for :actor_list do |field| %>
+    <% Actor.all.each do |actor| %>
+      <%= field.input "#{actor.id}", label: actor.full_name, as: :boolean %>
+    <% end %>
+  <% end %>
+  <%= f.submit %>
+<% end %>

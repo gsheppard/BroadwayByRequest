@@ -18,5 +18,10 @@ class Performance < ActiveRecord::Base
   def find_set_list(song)
     SetList.where(performance: self, song: song).first
   end
+
+  def song_actors(song)
+    set_list = find_set_list(song)
+    set_list.actors
+  end
 end
 
