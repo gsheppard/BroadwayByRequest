@@ -4,7 +4,7 @@ class CreateActors < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :email
-      t.integer :phone
+      t.integer :phone, precision: 10
 
       t.timestamps
     end
