@@ -1,0 +1,21 @@
+<h1>Musicals</h1>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Year</th>
+    <th></th>
+  </tr>
+
+  <% @musicals.each do |musical| %>
+    <tr>
+      <td><%= musical.name %></td>
+      <td><%= musical.year %></td>
+      <td><%= link_to "Go to", musical_path(musical) %>
+    </tr>
+  <% end %>
+</table>
+
+
+<br>
+<%= link_to "Add new Musical", new_musical_path %>

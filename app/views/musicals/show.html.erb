@@ -1,0 +1,7 @@
+<h1><%= @musical.name %></h1>
+
+Year: <%= @musical.year %>
+
+<br>
+<%= link_to "Edit", edit_musical_path(@musical) %>
+<%= link_to "Remove", musical_path, method: :delete %>
