@@ -4,12 +4,14 @@
   <tr>
     <th>Date</th>
     <th>Location</th>
+    <th></th>
   </tr>
 
   <% @performances.each do |performance| %>
     <tr>
       <td><%= performance.date %></td>
       <td><%= performance.location %></td>
+      <td><%= link_to "Go to", performance_path(performance) %>
     </tr>
   <% end %>
 </table>

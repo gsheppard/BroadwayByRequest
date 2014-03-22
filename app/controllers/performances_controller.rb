@@ -4,9 +4,18 @@ class PerformancesController < ApplicationController
     @performance = Performance.new
   end
 
+  def show
+    @performance = Performance.find(params[:id])
+  end
+
   def create
-    binding.pry
     @performance = Performance.new(performance_params)
+
+    if @performance.save
+      redirect_to root_path
+    else
+      redirect_to :new
+    end
   end
 
   private
