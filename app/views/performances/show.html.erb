@@ -3,6 +3,29 @@
 Location: <%= @performance.location %><br>
 Date: <%= @performance.date %>
 
+<h3>Set List</h3>
+
+<table border="1">
+  <tr>
+    <th>Song</th>
+    <th>Musical</th>
+    <th>Performer(s)</th>
+    <th></th>
+  </tr>
+
+  <% @performance.songs.each do |song| %>
+    <tr>
+      <td><%= song.name %></td>
+      <td><%= song.musical.name %></td>
+      <td></td>
+      <td><%= link_to "Remove", performance_set_list_path(@performance, @performance.find_set_list(song)), method: :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
 <br>
+<%= link_to "Add Set Item", new_performance_set_list_path(@performance) %>
+
+<br><br>
 <%= link_to "Edit", edit_performance_path(@performance) %>
 <%= link_to "Remove", performance_path, method: :delete %>
