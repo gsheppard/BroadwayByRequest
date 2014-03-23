@@ -30,6 +30,14 @@ end
 group :development, :test do
   gem 'hirb'
   gem 'pry'
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'valid_attribute'
+  gem 'dotenv-rails'
+  gem 'launchy'
 end
 
 gem 'simple_form'
