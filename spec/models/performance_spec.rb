@@ -24,11 +24,11 @@ describe Performance do
   end
 
   it "finds the set list based on the song" do
-    expect(performance.find_set_list(song)).to eq(song)
+    expect(performance.find_set_list(song)).to eq(set_list)
   end
 
   it "finds the actors who sang a song at a performance" do
-    expect(performance.song_actors(song)).to eq(actor)
+    expect(performance.song_actors(song)).to eq([actor])
   end
 
   it "makes an array of set lists and returns true from an array of song_ids" do
