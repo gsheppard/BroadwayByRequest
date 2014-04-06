@@ -1,28 +1,6 @@
-== README
+Ship It Saturday 8-hour hackathon
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Broadway By Request is a show where the audience picks the songs to be sung from a pool of about 50 musical numbers. On an average night, only about 15-20 songs will be performed. Due to the professional nature of the show, the director had to keep track of who was singing what song on a given night (since they rotated singers often). Originally she was tracking this information via a Word document. I decided this would make a great hackathon project.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Status: Functional.
+Next steps: Testing and User Auth.
